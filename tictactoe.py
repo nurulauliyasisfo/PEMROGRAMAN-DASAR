@@ -3,7 +3,7 @@ from tkinter import *
 
 play = Tk()
 play.geometry('700x600')
-play.title('Tic-Tac-Toe')
+play.title('TTC nurulAuliya')
 play.configure(bg="lightblue")
 
 p1 = StringVar()
@@ -24,7 +24,7 @@ def btnclick(buttons):
         possibilities()
         turns += 1
     else:
-        tkinter.messagebox.showerror('Tic-Tac-Toe', 'Invalid! Choose another slot.')
+        tkinter.messagebox.showerror('TTC', 'Invalid! Choose another slot.')
 
 def possibilities():
     global turns
@@ -46,10 +46,10 @@ def possibilities():
           b3['text'] == b6['text'] == b9['text'] == 'o' or
           b1['text'] == b5['text'] == b9['text'] == 'o' or
           b3['text'] == b5['text'] == b7['text'] == 'o'):
-        tkinter.messagebox.showinfo('Tic-Tac-Toe', p2.get() + ' Wins!')
+        tkinter.messagebox.showinfo('Tic-Tac-Toe', p2.get() + ' menang !')
         reset_game()
     elif turns == 8:
-        tkinter.messagebox.showwarning('Tic-Tac-Toe', 'It\'s a Draw!')
+        tkinter.messagebox.showwarning('Tic-Tac-Toe', 'It\'seri')
         reset_game()
 
 def reset_game():
@@ -61,51 +61,52 @@ def reset_game():
 
 Label(play, text='Tic-Tac-Toe', font=('calibri', 30), fg='blue').place(x=250, y=10)
 
-Label(play, text='PLAYER 1', font=('calibri', 30), fg='RED').place(x=100, y=80)
-Label(play, text='PLAYER 2', font=('calibri', 30), fg='GREEN').place(x=100, y=130)
+Label(play, text='Pemain 1', font=('arial', 30), fg='RED').place(x=100, y=80)
+Label(play, text='Pemain 2', font=('arial', 30), fg='GREEN').place(x=100, y=130)
 
 Entry(play, textvariable=p1, font=("calibri", 16), bg='lightblue').place(x=330, y=80)
 Entry(play, textvariable=p2, font=("calibri", 16), bg='lightblue').place(x=330, y=130)
 
-b1 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b1 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b1))
 b1.place(x=130, y=200)
 
-b2 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b2 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b2))
 b2.place(x=265, y=200)
 
-b3 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b3 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b3))
 b3.place(x=400, y=200)
 
-b4 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b4 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b4))
 b4.place(x=130, y=317)
 
-b5 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b5 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b5))
 b5.place(x=265, y=317)
 
-b6 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b6 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b6))
 b6.place(x=400, y=317)
 
-b7 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b7 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b7))
 b7.place(x=130, y=434)
 
-b8 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b8 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b8))
 b8.place(x=265, y=434)
 
-b9 = Button(play, text='', font=('calibri', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
+b9 = Button(play, text='', font=('arial', 25, 'bold'), width=7, height=2, bg='purple', fg='white',
             command=lambda: btnclick(b9))
 b9.place(x=400, y=434)
 
-reset_button = Button(play, text='Reset', font=('calibri', 20, 'bold'), width=10, bg='yellow', fg='black',
+reset_button = Button(play, text='Reset', font=('arial', 20, 'bold'), width=10, bg='yellow', fg='black',
                       command=reset_game)
 reset_button.place(x=550, y=500)
 
 play.mainloop()
+
 
